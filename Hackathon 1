@@ -1,0 +1,74 @@
+2a.
+import java.util.Scanner;
+
+public class SolarDetails {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Panel ID:");
+        int panelId = scanner.nextInt();
+
+        System.out.print("Enter Energy generated (kWh):");
+        double energyGenerated = scanner.nextDouble();
+
+        System.out.print("Enter Number of solar panels:");
+        int numberOfPanels = scanner.nextInt();
+
+        System.out.print("Enter System status:");
+        char systemStatus = scanner.next().charAt(0);
+
+        System.out.println("\n--- Rooftop Solar System Details ---");
+        System.out.println("Panel ID: " + panelId);
+        System.out.println("Energy Generated: " + energyGenerated + " kWh");
+        System.out.println("Number of Panels: " + numberOfPanels);
+        System.out.println("System Status: " + systemStatus);
+
+        scanner.close();
+    }
+}
+
+2b.
+import java.util.Scanner;
+
+public class SolarMoniter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter energy generated in kWh: ");
+        double energy = scanner.nextDouble();
+        
+        if (energy >= 10) {
+            System.out.println("Good Energy Generation");
+        } else {
+            System.out.println("Low Energy Generation");
+        }
+        
+        scanner.close();
+    }
+}
+
+2c.
+import java.util.Scanner;
+
+public class SolarEnergyCalculator {
+
+    public static double calculateTotalEnergy(double morningEnergy, double eveningEnergy) {
+        return morningEnergy + eveningEnergy;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter morning energy generated (kWh): ");
+        double morningEnergy = scanner.nextDouble();
+
+        System.out.print("Enter evening energy generated (kWh): ");
+        double eveningEnergy = scanner.nextDouble();
+
+        double totalEnergy = calculateTotalEnergy(morningEnergy, eveningEnergy);
+
+        System.out.println("Total Energy Generated: " + totalEnergy + " kWh");
+
+        scanner.close();
+    }
+}
